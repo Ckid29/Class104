@@ -26,16 +26,19 @@ function Pet(name,age, gender,breed,service,ownerName,contactPhone){
 let inputName=document.getElementById("txtName");
 let inputAge=document.getElementById("txtAge");
 let inputGender=document.getElementById("txtGender");
+let inputBreed=document.getElementById("txtBreed");
+let inputservice=document.getElementById("txtOwner");
+let inputPhone=document.getElementById("txtTel"); 
 
 function register(){
-    let thePet = new Pet(inputName.value,inputAge.value,inputGender.value);
+    let thePet = new Pet(inputName.value,inputAge.value,inputGender.value,inputBreed.value,inputService.value,inputOwner.value,inputPhone.value);
     console.log(thePet);
     petSalon.pets.push(thePet);
     clearInputs();
 }
 function clearInputs(){
     inputName.value="";
-
+    inputAge.value="";
 }
 let Janet= new Pet("Janet", "18wks", "male", "germansheppherd", "vet", "Johnathan", "2069452064")
 let Regina= new Pet("Regina", "9wks", "female", "Greyhound", "yes", "Shakira", "2533301698")
