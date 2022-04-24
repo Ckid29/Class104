@@ -15,3 +15,26 @@ header.site-header{
 .form-container div{
     margin-bottom: 1rem;
 }
+#pets{
+    display:flex;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+}
+.pet{
+    border:1px solid black;
+    background: pink;
+    border: radius 2px;
+    color: gray;
+    display:grid;
+}
+.pet label{
+    display: block;
+}
+.pet .pet-header{
+    display: flex;
+    justify-content: space-between;
+}
+.pet .pet-header button{
+    font-size: 14px;
+    border:none;
+}
