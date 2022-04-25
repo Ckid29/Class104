@@ -9,20 +9,22 @@
     <title>The Fashion Pet</title>
 </head>
 <body>
-    <header class="site-header">
-        <h1>The Fashion Pet</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="register.html">Register</a>
-        </nav>
+    <header class="hero-image">
+            <div class="hero-text">The Fashion Pet
+                <div class="navbar">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="register.html">Register</a>
+                </div>
+            </div>
+        </img>
     </header>
     <main>
 
         <div class="form-container container">
 			<h2>Register a new pet</h2>
-			<div >
+			<div>
 				<input class="form-control"
                 type="text" id="txtName" placeholder="Enter the name">
 			</div>
@@ -59,11 +61,14 @@
             <button onclick="searchPet();" class="btn btn-danger">Search</button>
         </div>
         <div class="container" id="pets">
-        
+            
         </div>
     </main>
-    <footer>
-
+    <footer class=" container3">
+        <p>Calle 37 #24-49,Cundinamarca, Bogota
+        </p>
+        <p>Hours</p>
+        <p>7:30am - 7 pm/ Monday- Sunday</p>
     </footer>
     <script src="scripts/display.js"></script>
     <script src="scripts/register.js"></script>

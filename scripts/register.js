@@ -1,4 +1,4 @@
-let petsSalon = {
+let petSalon = {
     name:"The Fashion Pet",
     address:{
         street:"Ave University",
@@ -43,11 +43,11 @@ function isValid(aPet){
     }
     if(aPet.service.length==0){
         valid=false;
-        console.error("Invalid name");
+        console.error("Invalid service");
     }
     if(aPet.phone.length==0){
         valid=false;
-        console.error("Invalid name");
+        console.error("Invalid phone");
     }
     return valid;
 }
@@ -55,8 +55,8 @@ function isValid(aPet){
 function register(){
     let thePet = new Pet(inputName.value,inputAge.value,inputGender.value,inputBreed.value,inputService.value,inputOwner.value,inputcontactPhone.value);
     if(isValid(thePet)){
-        petsSalon.pets.push(thePet);
-        displayCards();
+        petSalon.pets.push(thePet);
+        displayCards()
 
         clearInputs();
     }
@@ -73,15 +73,15 @@ function clearInputs(){
     inputPhone.value="";
 }
 
-function deletePet(petsId){
-    console.log("Deleting" + petsId);
+function deletePet(petId){
+    console.log("Deleting" + petId);
     let deleteIndex;
     //previous actions----
         //we need an id in the pet constructor
         //we need a delete button in the html
-    for(let i=0;i<petsSalon.pets.length;i++){
-        let pet = petsSalon.pets[i];
-        if(petsId==pets.id){
+    for(let i=0;i<petSalon.pet.length;i++){
+        let pet = petSalon.pets[i];
+        if(petId==pet.id){
 
             deleteIndex=i;
             console.log("I found it in position:" + i);
@@ -92,9 +92,9 @@ function deletePet(petsId){
         //find the id (if)
         //get the position in the array (store in a variable)
         //remove from the array(splice))
-        petsSalon.pets.splice(deleteIndex,1);
+        petSalon.pets.splice(deleteIndex,1);
         //remove from the html (remove))
-        document.getElementById(petsId).remove();
+        document.getElementById(petId).remove();
         //display to the user a message
     //    
 }
@@ -105,20 +105,20 @@ function searchPet(){
         //travel the array(for loop)
         let searchString = document.getElementById("txtSearch").value;
         console.log("Searching" + searchString);
-    for(let i=0;i<petsSalon.pets.length;i++){
-        let pets = petsSalon.pets[i];
+    for(let i=0;i<petSalon.pets.length;i++){
+        let pet = petSalon.pets[i];
         // find the id (if)
         if(searchString.toLowerCase() === pet.name.toLowerCase()){
             //highlight the result
-            document.getElementById(pets.id).classList.add("highlight");
+            document.getElementById(pet.id).classList.add("highlight");
         }else{
-            document.getElementById(pets.id).classList.remove("highlight");
+            document.getElementById(pet.id).classList.remove("highlight");
         }
     }
 }
 let Janet= new Pet("Janet", "18", "male", "germansheppherd", "vet", "Johnathan", "2069452064");
 let Regina= new Pet("Regina", "9", "female", "Greyhound", "yes", "Shakira", "2533301698");
 let Gretchen= new Pet("Gretchen", "3", "male", "Bulldog", "yes", "Usher", "8566253039");
-petsSalon.pets.push(Janet,Regina,Gretchen);
+petSalon.pets.push(Janet,Regina,Gretchen);
 displayCards();
 //Create three pets
